@@ -21,8 +21,8 @@ en dat terug te geven aan de gebruiker.
 
 ## Randvoorwaarden
 De opdracht moet voldoen aan de volgende voorwaarden:
-- In je main methode staan twee arrays (1 numeriek en 1 alfabetisch), een boolean variabele, een Translator object en een Scanner object;
-- Je project bevat 1 Translator class met daarin een HashMap variabele, een constructor met 2 arrays als parameter en een translate functie;
+- In je main methode staan twee arrays (1 numeriek en 1 alfabetisch), een boolean variabele, een nl.Novi.Translator object en een Scanner object;
+- Je project bevat 1 nl.Novi.Translator class met daarin een HashMap variabele, een constructor met 2 arrays als parameter en een translate functie;
 - De logica van de applicatie wordt gedraaid in een while(boolean)-loop in je main methode.
 
 ## Stappenplan
@@ -30,13 +30,13 @@ Let op: het is uitdagender om jouw eigen stappenplan te maken. Als je niet zo go
 1. Open de Main class in de `src`-map. Als het goed is zie je hier een `public static void main (String[] args)` methode.
 2. Maak in je main methode een Integer array genaamd `numeric` die je vult met de nummers 1,2,3,4,5,6,7,8,9,0.
 3. Maak in je main methode een String array genaamd `alphabetic` die je vult met de String varianten van de nummers uit stap 1, dus: "een", "twee", ... etc ..., "negen", "nul".
-4. Maak een nieuwe class aan en noem deze `Translator`.
-5. Maak in de Translator class een `HashMap<Integer,String>` variabele met de naam `numericAlpha`.
-6. Maak in de Translator class een constructor die de volgende parameters krijgt: `(String[] alphabetic, Integer[] numeric)`.
+4. Maak een nieuwe class aan en noem deze `nl.Novi.Translator`.
+5. Maak in de nl.Novi.Translator class een `HashMap<Integer,String>` variabele met de naam `numericAlpha`.
+6. Maak in de nl.Novi.Translator class een constructor die de volgende parameters krijgt: `(String[] alphabetic, Integer[] numeric)`.
 7. Schrijf in de constructor een for-loop die begint bij 0 en doorgaat tot de lengte van de numeric/alphabetic array (maakt niet uit welke, ze zijn even lang).
 8. Voeg in de body van de for-loop een nieuwe entry toe aan de HashMap met de correcte waardes uit `numeric` en `alphabetic`. Gebruik de `i` variabele uit je for-loop om de correcte waardes uit de arrays te halen.
-9. De constructor is klaar. Nu ga je deze aanroepen met de juiste argumenten in de main methode van de Main class, oftewel: maak in main een nieuw object aan van het type Translator.
-10. Maak in de Translator class een nieuwe methode genaamd `translate(Integer number)` die een String returnt.
+9. De constructor is klaar. Nu ga je deze aanroepen met de juiste argumenten in de main methode van de Main class, oftewel: maak in main een nieuw object aan van het type nl.Novi.Translator.
+10. Maak in de nl.Novi.Translator class een nieuwe methode genaamd `translate(Integer number)` die een String returnt.
 11. In de body van de translate methode return je de waarde (value) uit de numericAlpha HashMap die hoort bij de sleutel (key) van `number`
 12. Maak in de main methode van de Main class een boolean variabele genaamd `play` met de waarde `true`. Maak een String variabele genaamd `ongeldig` waarin je de String "ongeldige invoer" zet. Als laatst maak je nog een nieuw Scanner object aan met `Scanner scanner = new Scanner(System.in)`.
 13. Vervolgens maak je een while-loop die doorgaat zolang `play` true is.
@@ -53,13 +53,13 @@ Let op: het is uitdagender om jouw eigen stappenplan te maken. Als je niet zo go
         2. __else__: anders dan print je `ongeldig`
     4. __else__: Als de `input` dus iets anders dan "x" of "v" is, dan print je `ongeldig` 
  
-## Bonus (Mastermind)
+## nl.Novi.Bonus (Mastermind)
 
 Deze opdracht is los staand van de vorige opdracht. Mastermind is een spel waarbij je 4 verschillende random nummers moet raden. Als je een getal goed raadt en deze staat op de juiste plek krijg je + als feedback. Is het nummer goed maar niet op de juiste plek dan krijg je o als feedback. Komt het nummer helemaal niet voor dan krijg je X als feedback. Bij deze opdracht krijg je een stuk code en is het aan jou om hem verder werkend te krijgen en uit te breiden.
 
 1. maak een methode genaamd "randomNumberGenerator" die een hashset met 4 random nummers returned. _Tip:_ Gebruik een while-loop en de java.util.Random class om random nummers aan de set toe te voegen, zolang de set korter is dan 4.
 2. maak een methode die een HashSet als parameter inneemt en een string van 4 nummers returned. _Tip:_ Maak een lege String variable (of StringBuilder). Gebruik een for-loop om door de HashSet te loopen om zo elke element uit de Set toe te voegen aan de String (of StringBuilder).
 3. voeg de string van 4 nummers als parameter toe bij het aanroepen van de methode "feedback".
-**Bonus-bonus:** maak de methode zo dat je vaker kan raden.
+**nl.Novi.Bonus-bonus:** maak de methode zo dat je vaker kan raden.
 4. Zet onderaan een comment erbij waarom de Hashset eigenlijk geen goede keuze is geweest voor deze opdracht.
  
